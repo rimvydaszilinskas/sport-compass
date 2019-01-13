@@ -14,14 +14,18 @@ block content
 					else 
 						each computer in computers
 							.media
-								img.mr-3(src=`/images/${computer.image}`, alt='image-item', style='max-height: 128px')
+								img.mr-3(src=`images/${computer.images[0]}`, alt='image-item', style='max-height: 128px')
 								.media-body
 									h5.mt-0=`${computer.manufacturer} ${computer.model}`
-									p=`${computer.processor} | ${computer.graphics} | ${computer.memory}`
+									p=`${computer.processor} | ${computer.graphics} | ${computer.storage}`
 									p=`${computer.price} DKK.`
 			hr
 			.row
 				.col-md-4.offset-md-9
 					| Total value: 
-					span 75000 DKK
-					button.btn.btn-success Checkout
+					span=`${total} DKK`
+					if(total === 0)
+						button.btn.btn-success.disabled Checkout
+					else
+						button.btn.btn-success Checkout
+

@@ -6,10 +6,11 @@
             "model" : "Inspirion 7567",
             "processor" : "Intel Core i7",
             "graphics" : "Nvidia GeForce GTX 1050ti",
-            "screensize" : "15",
-            "memory" : "256 GB m.2 SSD",
+            "screensize" : 15,
+            "storage" : "256 GB m.2 SSD",
             "price" : 7500,
-            "image" : "laptop.jpg"
+            "description": "15-inch gaming laptop with stunning visuals up to NVIDIA® GeForce® GTX 1060 graphics and the latest 8th Gen Intel® Quad- and Hex-Core™ CPUs.",
+            "images" : ["laptop.jpg"]
         },
         {
             "id" : 2,
@@ -17,10 +18,11 @@
             "model" : "XPS 13",
             "processor" : "Intel Core i5",
             "graphics" : "Intel",
-            "screensize" : "13",
-            "memory" : "512 GB m.2 SSD",
+            "screensize" : 13,
+            "storage" : "512 GB m.2 SSD",
             "price" : 12500,
-            "image" : "laptop.jpg"
+            "description": "A 13-inch laptop in the size of an 11-inch, featuring a virtually borderless InfinityEdge display and 8th Gen Intel processors.​",
+            "images" : ["laptop.jpg", "laptop2.jpg"]
         },
         {
             "id" : 3,
@@ -28,10 +30,11 @@
             "model" : "Surface Go",
             "processor" : "Intel Pentium",
             "graphics" : "Intel HD",
-            "screensize" : "10",
-            "memory" : "128 GB SSD",
+            "screensize" : 10,
+            "storage" : "128 GB SSD",
             "price" : 4599,
-            "image" : "laptop.jpg"
+            "description": "New Surface Go is perfect for all your daily tasks, giving you laptop performance, tablet portability, and a stunning touchscreen with the power of Windows 10 Home in S mode. Surface Go Signature Type Cover and Surface Pen sold separately.",
+            "images" : ["laptop.jpg"]
         }
     ]
 }
