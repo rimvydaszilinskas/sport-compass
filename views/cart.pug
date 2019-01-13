@@ -5,27 +5,29 @@ block content
 			.row
 				.col-md-4
 					h2 Cart
+					p.lead#item-count-cart=`${items.length} items in the cart`
 			hr
 			.container-fluid
 				.row
-					if (computers.length === 0)
+					if (items.length === 0)
 						.col-md-4.offset-md-4
 							h4="No items in the basket"
 					else 
-						each computer in computers
+						each computer in items
 							.media
 								img.mr-3(src=`images/${computer.images[0]}`, alt='image-item', style='max-height: 128px')
 								.media-body
 									h5.mt-0=`${computer.manufacturer} ${computer.model}`
 									p=`${computer.processor} | ${computer.graphics} | ${computer.storage}`
 									p=`${computer.price} DKK.`
+									button.btn.btn-danger.delete-cart-item(id=`delete-${computer.id}`) Delete
 			hr
 			.row
 				.col-md-4.offset-md-9
 					| Total value: 
-					span=`${total} DKK`
+					span#totalAmmount=`${total} DKK`
 					if(total === 0)
 						button.btn.btn-success.disabled Checkout
 					else
-						button.btn.btn-success Checkout
+						button.btn.btn-success.checkout Checkout
 

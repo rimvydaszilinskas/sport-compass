@@ -18,7 +18,7 @@ module.exports = (config) => {
                 });
             });
         }
-        res.render("cart", {computers: items, total: total, itemCount: itemCount});
+        res.render("cart", {items: items, total: total, itemCount: itemCount});
     });
 
     router.post("/add", (req, res) => {
@@ -28,10 +28,10 @@ module.exports = (config) => {
             var itemsInList = [];
             itemsInList.push(req.body.itemID);
             req.session.cartItems = itemsInList;
-            res.json({size: req.session.cartItems.length});
+            res.status(200).json({size: req.session.cartItems.length});
         } else {
             req.session.cartItems.push(req.body.itemID);
-            res.json({size: req.session.cartItems.length});
+            res.status(200).json({size: req.session.cartItems.length});
         }
     });
 
@@ -40,8 +40,19 @@ module.exports = (config) => {
             return res.status(400).json({response: "no itemID"});
         if(req.session.cartItems.indexOf(req.body.itemID) === -1)
             return res.status(400).json({response: "bad request"});
-        if(req.session.cartItems.splice(req.session.cartItems.indexOf(req.body.itemID), 1) !== null)
-            return res.status(200).json({response: "OK"});
+        if(req.session.cartItems.splice(req.session.cartItems.indexOf(req.body.itemID), 1) !== null){
+            var total = 0;
+            if(req.session.cartItems){
+                req.session.cartItems.forEach(id => {
+                    config.data.computers.forEach(computer => {
+                        if(id == computer.id) {
+                            total += computer.price;
+                        }
+                    });
+                });
+            }
+            return res.status(200).json({response: "OK", count: req.session.cartItems.length, total: total});
+        }
         res.status(500).json({response: "Internal server error"});
     });
 

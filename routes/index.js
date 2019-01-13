@@ -7,7 +7,16 @@ const router = express.Router();
 module.exports = (config) => {
     router.get("/", (req, res) => {
         console.log(req.sessionID)
-        res.render("index", {computers : config.data.computers});
+        if(req.session.cartItems)
+            var arr = req.session.cartItems;
+        else 
+            var arr = [];
+        res.render("index", {computers : config.data.computers, items: arr});
+    });
+
+    router.post("/checkout", (req, res) => {
+        req.session.destroy();
+        res.status(200).json({response: "Session ended"});
     });
 
     router.use("/api", apiRoutes(config));
