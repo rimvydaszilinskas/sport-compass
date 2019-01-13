@@ -1,0 +1,58 @@
+html,body {
+    height:100%;
+    margin: 0;
+    padding: 0;
+}
+
+#filter-form {
+    width: 100%;
+}
+
+.container {
+    margin-top: 15px;
+    padding-bottom: 55px;
+}
+
+#container {
+    min-height: 100%;
+    position: relative;
+}
+
+.card {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.carousel {
+    height: 75%;
+    width: 75%;
+}
+
+.media {
+    width: 100%;
+    border-radius: 5px;
+    border-color: lightgrey;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.media {
+    margin-top: 15px;
+}
+
+footer {
+    height: 3em;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+}
+
+footer a {
+    color: black;
+}
+
+footer a:hover {
+    color: black;
+}
