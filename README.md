@@ -11,4 +11,6 @@ npm start
 ```
 All the required packages will be automatically installed.
 
+Pug was used as a view engine.
+
 Rimvydas Zilinskas
