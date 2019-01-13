@@ -1,124 +1,28 @@
-doctype html
-html(lang='en')
-	head
-		meta(charset='utf-8')
-		meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-		link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css', integrity='sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS', crossorigin='anonymous')
-		link(rel='stylesheet', href='style.css')
-		title SportCompass
-	body
-		nav.navbar.navbar-expand-md.navbar-light.bg-light
-			a.navbar-brand(href='index.html') SportCompass
-			ul.navbar-nav.ml-auto
-				li.nav-item.active
-					a.nav-link(href='index.html') Home
-				li.nav-item.active
-					a.nav-link(href='cart.html')
-						img(src='data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDUxMCA1MTAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMCA1MTA7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8ZyBpZD0ic2hvcHBpbmctY2FydCI+CgkJPHBhdGggZD0iTTE1Myw0MDhjLTI4LjA1LDAtNTEsMjIuOTUtNTEsNTFzMjIuOTUsNTEsNTEsNTFzNTEtMjIuOTUsNTEtNTFTMTgxLjA1LDQwOCwxNTMsNDA4eiBNMCwwdjUxaDUxbDkxLjgsMTkzLjhMMTA3LjEsMzA2ICAgIGMtMi41NSw3LjY1LTUuMSwxNy44NS01LjEsMjUuNWMwLDI4LjA1LDIyLjk1LDUxLDUxLDUxaDMwNnYtNTFIMTYzLjJjLTIuNTUsMC01LjEtMi41NS01LjEtNS4xdi0yLjU1MWwyMi45NS00My4zNWgxODguNyAgICBjMjAuNCwwLDM1LjctMTAuMiw0My4zNS0yNS41TDUwNC45LDg5LjI1YzUuMS01LjEsNS4xLTcuNjUsNS4xLTEyLjc1YzAtMTUuMy0xMC4yLTI1LjUtMjUuNS0yNS41SDEwNy4xTDg0LjE1LDBIMHogTTQwOCw0MDggICAgYy0yOC4wNSwwLTUxLDIyLjk1LTUxLDUxczIyLjk1LDUxLDUxLDUxczUxLTIyLjk1LDUxLTUxUzQzNi4wNSw0MDgsNDA4LDQwOHoiIGZpbGw9IiMwMDAwMDAiLz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K')
-						span#item-count
-		#container.container-fluid
-			.container
+extends layout/index
+block content
+	#container.container-fluid
+		.container
+			.row
+				.col-md-4
+					h2 Cart
+			hr
+			.container-fluid
 				.row
-					.col-md-4
-						h2 Cart
-				hr
-				.container-fluid
-					.row
-						.media
-							img.mr-3(src='images/laptop.jpg', alt='image-item', style='max-height: 128px')
-							.media-body
-								h5.mt-0 Dell Inspirion 7567
-								p Intel Core i7 | Nvidia GeForce GTX 1050ti | 256 GB m.2
-								p 7500 DKK
-						.media
-							img.mr-3(src='images/laptop.jpg', alt='image-item', style='max-height: 128px')
-							.media-body
-								h5.mt-0 Dell Inspirion 7567
-								p Intel Core i7 | Nvidia GeForce GTX 1050ti | 256 GB m.2
-								p 7500 DKK
-				hr
-				.row
-					.col-md-4.offset-md-9
-						| Total value: 
-						span 75000 DKK
-						button.btn.btn-success Checkout
-			footer.bg-light
-				| Applicant: 
-				a(href='http://github.com/rimvydaszilinskas') Rimvydas Zilinskas
-		#details-modal.modal.fade.bd-example-modal-xl(tabindex='-1', role='dialog', aria-labelledby='myExtraLargeModalLabel', aria-hidden='true')
-			.modal-dialog.modal-xl
-				.modal-content
-					.modal-header
-						h5.modal-title Item description
-						button.close(type='button', data-dismiss='modal', aria-label='close')
-							span(aria-hidden='true') ×
-					.modal-body
-						.container-fluid
-							.row
-								#carouselExampleControls.carousel.slide(data-ride='carousel')
-									.carousel-inner
-										.carousel-item.active
-											img.d-block.w-100(src='./images/laptop.jpg', alt='...')
-										.carousel-item
-											img.d-block.w-100(src='./images/laptop.jpg', alt='...')
-										.carousel-item
-											img.d-block.w-100(src='./images/laptop.jpg', alt='...')
-									a.carousel-control-prev(href='#carouselExampleControls', role='button', data-slide='prev')
-										span.carousel-control-prev-icon(aria-hidden='true')
-										span.sr-only Previous
-									a.carousel-control-next(href='#carouselExampleControls', role='button', data-slide='next')
-										span.carousel-control-next-icon(aria-hidden='true')
-										span.sr-only Next
-							.row
-								.col
-									h3 Dell Inspirion
-							.row
-								.col-md-6
-									p Description for the laptop goes over here
-								.col-md-6
-									table.table
-										tbody
-											tr
-												th Basics
-												th
-											tr
-												td Manufacturer
-												td Dell
-											tr
-												td Model
-												td Inspirion 7567
-											tr
-												th Processor
-												th
-											tr
-												td Model
-												td Intel Core i7
-											tr
-												td No of cores
-												td 4
-											tr
-												th Graphics
-												th
-											tr
-												td Model
-												td Nvidia GeForce 1050ti
-											tr
-												td VRAM
-												td 4GB GDDR5
-											tr
-												th Memory
-												th
-											tr
-												td Memory
-												td 8GB DDR4
-											tr
-												td Storage
-												td 256GB m.2 SSD
-					.modal-footer
-						button.btn.btn-success(type='button', data-dismiss='modal') Add to cart
-						button.btn(type='button', data-dismiss='modal') Close
-		script(src='https://code.jquery.com/jquery-3.3.1.js', integrity='sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=', crossorigin='anonymous')
-		script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
-		script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js', integrity='sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut', crossorigin='anonymous')
-		script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js', integrity='sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k', crossorigin='anonymous')
-		script(src='script.js')
+					.media
+						img.mr-3(src='images/laptop.jpg', alt='image-item', style='max-height: 128px')
+						.media-body
+							h5.mt-0 Dell Inspirion 7567
+							p Intel Core i7 | Nvidia GeForce GTX 1050ti | 256 GB m.2
+							p 7500 DKK
+					.media
+						img.mr-3(src='images/laptop.jpg', alt='image-item', style='max-height: 128px')
+						.media-body
+							h5.mt-0 Dell Inspirion 7567
+							p Intel Core i7 | Nvidia GeForce GTX 1050ti | 256 GB m.2
+							p 7500 DKK
+			hr
+			.row
+				.col-md-4.offset-md-9
+					| Total value: 
+					span 75000 DKK
+					button.btn.btn-success Checkout

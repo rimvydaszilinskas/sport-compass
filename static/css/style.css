@@ -43,7 +43,7 @@ html,body {
 footer {
     height: 3em;
     width: 100%;
-    position: absolute;
+    position: relative;
     left: 0;
     bottom: 0;
     text-align: center;

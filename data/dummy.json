@@ -1,5 +1,37 @@
 {
     "computers" : [
-        
+        {
+            "id" : 1,
+            "manufacturer": "Dell",
+            "model" : "Inspirion 7567",
+            "processor" : "Intel Core i7",
+            "graphics" : "Nvidia GeForce GTX 1050ti",
+            "screensize" : "15",
+            "memory" : "256 GB m.2 SSD",
+            "price" : 7500,
+            "image" : "laptop.jpg"
+        },
+        {
+            "id" : 2,
+            "manufacturer": "Dell",
+            "model" : "XPS 13",
+            "processor" : "Intel Core i5",
+            "graphics" : "Intel",
+            "screensize" : "13",
+            "memory" : "512 GB m.2 SSD",
+            "price" : 12500,
+            "image" : "laptop.jpg"
+        },
+        {
+            "id" : 3,
+            "manufacturer": "Microsoft",
+            "model" : "Surface Go",
+            "processor" : "Intel Pentium",
+            "graphics" : "Intel HD",
+            "screensize" : "10",
+            "memory" : "128 GB SSD",
+            "price" : 4599,
+            "image" : "laptop.jpg"
+        }
     ]
 }
