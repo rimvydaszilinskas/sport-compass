@@ -8,18 +8,17 @@ block content
 			hr
 			.container-fluid
 				.row
-					.media
-						img.mr-3(src='images/laptop.jpg', alt='image-item', style='max-height: 128px')
-						.media-body
-							h5.mt-0 Dell Inspirion 7567
-							p Intel Core i7 | Nvidia GeForce GTX 1050ti | 256 GB m.2
-							p 7500 DKK
-					.media
-						img.mr-3(src='images/laptop.jpg', alt='image-item', style='max-height: 128px')
-						.media-body
-							h5.mt-0 Dell Inspirion 7567
-							p Intel Core i7 | Nvidia GeForce GTX 1050ti | 256 GB m.2
-							p 7500 DKK
+					if (computers.length === 0)
+						.col-md-4.offset-md-4
+							h4="No items in the basket"
+					else 
+						each computer in computers
+							.media
+								img.mr-3(src=`/images/${computer.image}`, alt='image-item', style='max-height: 128px')
+								.media-body
+									h5.mt-0=`${computer.manufacturer} ${computer.model}`
+									p=`${computer.processor} | ${computer.graphics} | ${computer.memory}`
+									p=`${computer.price} DKK.`
 			hr
 			.row
 				.col-md-4.offset-md-9
